@@ -1,0 +1,543 @@
+/* =========================================
+   1. CONFIGURACIÓN GENERAL
+   ========================================= */
+
+:root {
+  --verde-salvia: #71816a;
+  --verde-oscuro: #354638;
+  --marfil: #f7f3ea;
+  --blanco: #ffffff;
+  --texto: #353a32;
+  --texto-suave: #62665e;
+  --borde: #e5e1d7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Questrial", sans-serif;
+  color: var(--texto);
+  background-color: var(--marfil);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* =========================================
+   2. BARRA DE NAVEGACIÓN
+   ========================================= */
+
+.navbar-virdi {
+  padding: 18px 5%;
+  background-color: var(--marfil);
+  border-bottom: 1px solid var(--borde);
+}
+
+.navbar-virdi .navbar-brand {
+  color: var(--verde-oscuro);
+  font-family: Georgia, serif;
+  font-size: 21px;
+}
+
+.navbar-virdi .nav-link {
+  color: var(--texto);
+  transition: color 0.25s ease;
+}
+
+.navbar-virdi .nav-link:hover {
+  color: var(--verde-salvia);
+}
+
+/* =========================================
+   3. PORTADA PRINCIPAL
+   ========================================= */
+
+.hero {
+  padding: 80px 0;
+  background-color: var(--marfil);
+}
+
+.hero h1 {
+  color: var(--verde-oscuro);
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 4.2vw, 60px);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.hero h1 span {
+  display: block;
+  color: var(--verde-salvia);
+  font-style: italic;
+}
+
+.hero-image-frame {
+  height: 500px;
+  overflow: hidden;
+  border-radius: 48% 48% 5px 5px;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-virdi {
+  display: inline-block;
+  padding: 14px 26px;
+  color: var(--blanco);
+  background-color: var(--verde-oscuro);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.25s ease;
+}
+
+.btn-virdi:hover {
+  color: var(--blanco);
+  background-color: var(--verde-salvia);
+}
+
+/* =========================================
+   4. ESTILOS COMPARTIDOS
+   ========================================= */
+
+.productos-etiqueta {
+  margin-bottom: 12px;
+  color: var(--verde-salvia);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.esencia-virdi h2,
+.historia-virdi h2,
+.invitacion-virdi h2,
+.inspiracion-encabezado h2 {
+  color: var(--verde-oscuro);
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: normal;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.esencia-virdi p:not(.productos-etiqueta),
+.historia-virdi p:not(.productos-etiqueta),
+.invitacion-virdi p:not(.productos-etiqueta) {
+  color: var(--texto);
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+/* =========================================
+   5. NUESTRA ESENCIA
+   ========================================= */
+
+.esencia-virdi {
+  padding: 90px 0;
+  background-color: var(--blanco);
+}
+
+.esencia-imagen {
+  display: block;
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 180px 180px 12px 12px;
+}
+
+/* =========================================
+   6. LO QUE NOS INSPIRA
+   ========================================= */
+
+.inspiracion-virdi {
+  padding: 75px 0;
+  background-color: var(--marfil);
+}
+
+.inspiracion-encabezado {
+  max-width: 650px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.inspiracion-encabezado h2 {
+  margin-bottom: 18px;
+}
+
+.inspiracion-encabezado > p:last-child {
+  color: var(--texto);
+  line-height: 1.8;
+}
+
+.inspiracion-card {
+  height: 100%;
+  padding: 32px 24px;
+  text-align: center;
+  background-color: var(--blanco);
+  border: 1px solid rgba(113, 129, 106, 0.18);
+  border-radius: 12px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.inspiracion-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(53, 70, 56, 0.08);
+}
+
+.inspiracion-icono {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: var(--verde-salvia);
+  font-family: Georgia, serif;
+  font-size: 42px;
+  line-height: 1;
+}
+
+.inspiracion-card h3 {
+  margin-bottom: 14px;
+  color: var(--verde-oscuro);
+  font-family: Georgia, serif;
+  font-size: 1.35rem;
+}
+
+.inspiracion-card p {
+  margin-bottom: 0;
+  color: var(--texto);
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+/* =========================================
+   7. NUESTRA HISTORIA
+   ========================================= */
+
+.historia-virdi {
+  padding: 90px 0;
+  background-color: var(--marfil);
+}
+
+.historia-contenido {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.historia-firma {
+  margin-top: 30px;
+  color: var(--verde-oscuro) !important;
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+/* =========================================
+   8. PIE DE PÁGINA
+   ========================================= */
+
+.footer-virdi {
+  padding: 40px 0 20px;
+  text-align: center;
+  background-color: var(--verde-oscuro);
+  color: var(--marfil);
+}
+
+.footer-marca {
+  margin-bottom: 8px;
+  font-family: Georgia, serif;
+  font-size: 23px;
+}
+
+.footer-frase {
+  margin-bottom: 22px;
+  color: var(--marfil);
+  opacity: 0.85;
+}
+
+.footer-enlaces {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin: 0 0 25px;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-enlaces a {
+  color: var(--marfil);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.footer-enlaces a:hover {
+  color: #c8d2bd;
+}
+
+.footer-copyright {
+  margin: 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+@media (max-width: 575.98px) {
+  .footer-enlaces {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+/* =========================================
+   9. INVITACIÓN AL CATÁLOGO
+   ========================================= */
+
+.invitacion-virdi {
+  padding: 80px 0;
+  background-color: #eeeee5;
+}
+
+.invitacion-virdi .container {
+  max-width: 760px;
+}
+
+/* =========================================
+   10. RAMOS DESTACADOS Y CATÁLOGO
+   ========================================= */
+
+.productos {
+  padding: 90px 0;
+  background-color: var(--blanco);
+}
+
+.productos-encabezado {
+  max-width: 650px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.productos-encabezado h2 {
+  margin-bottom: 18px;
+  color: var(--verde-oscuro);
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 4vw, 45px);
+  font-weight: normal;
+}
+
+.productos-intro {
+  color: var(--texto-suave);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.productos .row {
+  row-gap: 25px;
+}
+
+.ramo-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--marfil);
+  border: 1px solid #e8e2d6;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(53, 70, 56, 0.04);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.ramo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(53, 70, 56, 0.12);
+}
+
+.ramo-imagen {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.ramo-contenido {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-start;
+  padding: 25px;
+}
+
+.ramo-contenido h3 {
+  margin-bottom: 14px;
+  color: var(--verde-oscuro);
+  font-family: Georgia, serif;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.ramo-contenido p {
+  margin-bottom: 24px;
+  color: var(--texto-suave);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   11. BOTONES DE WHATSAPP Y NAVEGACIÓN
+   ========================================= */
+
+.btn-whatsapp-virdi {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: auto;
+  padding: 12px 16px;
+  color: var(--verde-oscuro);
+  background-color: transparent;
+  border: 1px solid var(--verde-salvia);
+  border-radius: 4px;
+  font-size: 14px;
+  text-decoration: none;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.btn-whatsapp-virdi:hover {
+  color: var(--blanco);
+  background-color: var(--verde-oscuro);
+  border-color: var(--verde-oscuro);
+}
+
+.btn-volver-virdi {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 22px;
+  color: var(--verde-oscuro);
+  background-color: transparent;
+  border: 1px solid var(--verde-salvia);
+  border-radius: 30px;
+  font-size: 15px;
+  text-decoration: none;
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.btn-volver-virdi:hover {
+  color: var(--blanco);
+  background-color: var(--verde-salvia);
+  border-color: var(--verde-salvia);
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   12. CONTACTO
+   ========================================= */
+
+#contacto {
+  padding: 60px 0;
+}
+
+/* =========================================
+   13. ADAPTACIÓN A TABLETS
+   ========================================= */
+
+@media (max-width: 991.98px) {
+  .hero {
+    padding: 45px 0;
+  }
+
+  .hero-image-frame {
+    height: 400px;
+  }
+}
+
+/* =========================================
+   14. ADAPTACIÓN A CELULARES
+   ========================================= */
+
+@media (max-width: 767px) {
+  .esencia-virdi,
+  .historia-virdi {
+    padding: 55px 0;
+  }
+
+  .esencia-imagen {
+    height: 340px;
+    border-radius: 120px 120px 10px 10px;
+  }
+
+  .inspiracion-virdi {
+    padding: 55px 0;
+  }
+
+  .inspiracion-encabezado {
+    margin-bottom: 30px;
+  }
+
+  .inspiracion-card {
+    padding: 28px 22px;
+  }
+
+  .invitacion-virdi {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-image-frame {
+    height: 330px;
+  }
+
+  .productos {
+    padding: 60px 0;
+  }
+
+  .ramo-imagen {
+    height: 240px;
+  }
+
+  .ramo-contenido {
+    padding: 20px;
+  }
+}
+
+/* =========================================
+   15. ACCESIBILIDAD
+   Reduce las animaciones si el dispositivo
+   tiene activada esa preferencia.
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .ramo-card,
+  .btn-whatsapp-virdi,
+  .btn-volver-virdi,
+  .inspiracion-card,
+  .navbar-virdi .nav-link,
+  .btn-virdi {
+    transition: none;
+  }
+
+  .ramo-card:hover,
+  .inspiracion-card:hover,
+  .btn-volver-virdi:hover {
+    transform: none;
+  }
+}
